@@ -1,0 +1,40 @@
+<style>
+    body,
+    button {
+        font-family: tahoma;
+    }
+
+    #pagination-controls button {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(228, 228, 228);
+        border: 1px solid rgb(228, 228, 228);
+        font-size: 15px;
+    }
+</style>
+<div id="paginator"></div>
+<div id="pagination-controls"></div>
+
+<script src="./paginator-1.1.js"></script>
+<script>
+
+    class Record {
+        constructor() {
+            this.id = crypto.randomUUID();
+        }
+    }
+
+    let records = [];
+
+    for (var i = 0; i < 34; i++) {
+        records.push(new Record())
+    }
+
+    let paginator = new Paginator();
+    paginator.items = records;
+    paginator.itemsPerPage = 10;
+    paginator.container = this.document.getElementById("paginator");
+    paginator.controls = this.document.getElementById("pagination-controls");
+    paginator.paginate();
+
+</script>

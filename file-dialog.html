@@ -1,0 +1,29 @@
+
+<button>
+    Save As...
+  </button>
+<script>
+
+const button = document.querySelector("button");
+const data = {
+    "id": 1
+}
+
+button.onclick = saveAs;
+
+async function saveAs(event) {
+    const handle = await showSaveFilePicker({
+        suggestedName: 'FILE_NAME',
+        types: [{
+            description: 'JSON',
+            accept: {
+                'text/json': ['.json'],
+            },
+        }],
+    });
+    const writable = await handle.createWritable();
+    await writable.write(JSON.stringify(data));
+    writable.close();
+}
+
+</script>

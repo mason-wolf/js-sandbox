@@ -1,0 +1,19 @@
+body, button, input {
+    font-family: tahoma;
+}
+
+a {
+    color: blue;
+}
+
+.save-status {
+    background-color: rgb(166, 221, 166);
+    height: 15px;
+    width: 100%;
+    padding: .5em;
+    display: none;
+}
+
+.remove-button {
+    color: red;
+}
