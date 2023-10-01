@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: tahoma;
+    font-size: 24px;
+    background-color: #181818;
+    color: white;
+}
+
+a {
+    color: rgb(143, 143, 211);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    color: rgb(123, 168, 123);
+}
+
+.header, .main, .sidebar, .nav {
+    padding: 1em;
+}
+
+.header {
+    grid-area: header;
+    background-color: #252525;
+    color:white;
+}
+
+.main {
+    grid-area: main;
+    margin-top: -25px;
+}
+
+.nav {
+    text-align: center;
+    grid-area: nav;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "main main main nav"
+    "footer footer footer footer"
+}
+
+li {
+    list-style-type: none;
+}
+
+input {
+    width: 100%;
+    background-color: #444444;
+    color: white;
+    padding: .5em;
+    margin-top:10px;
+    border: 1px solid #609b13;
+    outline: none;
+    font-size: 18px;
+}
+
+.field {
+    margin-top: 15px;
+}
+
+.field label {
+    font-size: 18px;
+}
